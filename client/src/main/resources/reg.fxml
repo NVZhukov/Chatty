@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.311" fx:controller="client.RegController">
+
+    <stylesheets>
+        <URL value="@/css/styleReg.css" />
+    </stylesheets>
+
+
+    <top>
+        <AnchorPane>
+            <Label text="Your login: " AnchorPane.topAnchor="43" AnchorPane.leftAnchor="30"/>
+            <TextField fx:id="loginField" HBox.hgrow="ALWAYS" promptText="login" AnchorPane.topAnchor="40" AnchorPane.rightAnchor="250"/>
+            <Label text="Your password: " AnchorPane.topAnchor="85" AnchorPane.leftAnchor="30"/>
+            <PasswordField fx:id="passwordField" HBox.hgrow="ALWAYS" promptText="password" AnchorPane.topAnchor="80" AnchorPane.rightAnchor="250"/>
+            <Label text="Your nickname: " AnchorPane.topAnchor="128" AnchorPane.leftAnchor="30"/>
+            <TextField fx:id="nicknameField" HBox.hgrow="ALWAYS" promptText="nickname" AnchorPane.topAnchor="120" AnchorPane.rightAnchor="250"/>
+        </AnchorPane>
+    </top>
+
+
+    <bottom>
+        <AnchorPane>
+            <TextArea fx:id="TextArea" editable="false" AnchorPane.bottomAnchor="0"/>
+            <Button text="Registration" onAction="#tryToReg" AnchorPane.rightAnchor="270" AnchorPane.bottomAnchor="0"/>
+        </AnchorPane>
+    </bottom>
+</BorderPane>

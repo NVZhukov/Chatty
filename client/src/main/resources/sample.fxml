@@ -17,11 +17,18 @@
             <TextField fx:id="loginField" HBox.hgrow="ALWAYS" promptText="login"/>
             <PasswordField fx:id="passwordField" HBox.hgrow="ALWAYS" promptText="password"/>
             <Button text="login!" onAction="#tryToAuth"/>
+            <Button text="Reg" onAction="#tryToReg"/>
+
         </HBox>
     </top>
 
     <center>
-        <TextArea fx:id="textArea" editable="false" />
+        <AnchorPane>
+            <TextArea fx:id="textArea"  HBox.hgrow="ALWAYS" editable="false" AnchorPane.leftAnchor="0" AnchorPane.bottomAnchor="0"
+            AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0"/>
+            <ListView fx:id="clientList" managed="false" visible="false" maxWidth="180" AnchorPane.rightAnchor="0"
+            AnchorPane.bottomAnchor="2" AnchorPane.topAnchor="1" onMouseReleased="#clientListMouseAction"/>
+        </AnchorPane>
     </center>
 
     <bottom>
