@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.311" fx:controller="client.Controller">
+
+
+
+    <stylesheets>
+        <URL value="@/css/style.css" />
+    </stylesheets>
+
+
+    <top>
+        <HBox fx:id="authPanel">
+            <TextField fx:id="loginField" HBox.hgrow="ALWAYS" promptText="login"/>
+            <PasswordField fx:id="passwordField" HBox.hgrow="ALWAYS" promptText="password"/>
+            <Button text="login!" onAction="#tryToAuth"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TextArea fx:id="textArea" editable="false" />
+    </center>
+
+    <bottom>
+        <AnchorPane fx:id="msgPanel" visible="false" managed="false">
+            <TextField fx:id="textField" onAction="#sendMsg" promptText="Your message..." AnchorPane.leftAnchor="0"
+                       AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="70"/>
+            <Button fx:id="btn1" onAction="#sendMsg" text="send..." AnchorPane.rightAnchor="0" />
+        </AnchorPane>
+    </bottom>
+</BorderPane>
